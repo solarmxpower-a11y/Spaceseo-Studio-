@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080e1d">
+<meta name="description" content="Personal space YouTube SEO toolkit for titles, hooks, keywords, descriptions and Shorts tracking.">
+<title>SpaceSEO Studio</title>
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{color-scheme:dark;--bg:#080e1d;--panel:#111b30;--line:#263650;--muted:#9bacbf;--text:#f1f5f9;--purple:#6d5dfc;--input:#0b1427}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px system-ui,-apple-system,Segoe UI,sans-serif}header{padding:18px 16px;background:linear-gradient(120deg,#20214e,#102a40);border-bottom:1px solid var(--line)}main{max-width:800px;margin:auto;padding:16px}h1{font-size:23px;margin:0 0 4px}h2{font-size:18px;margin:0 0 8px}.muted{color:var(--muted);font-size:13px;line-height:1.5}.stats,.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.stats{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:16px}.stat,.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}.stat strong{display:block;margin-top:5px}.tabs{display:flex;gap:7px;overflow:auto;margin:14px 0}.tab,button{border:1px solid #34445e;background:#1b2941;color:var(--text);border-radius:9px;padding:10px 12px;font:inherit;cursor:pointer}.tab.active,.primary{background:var(--purple);border-color:var(--purple);color:white}.panel{margin-bottom:12px}label{display:block;color:#bac9da;font-size:13px;margin:12px 0 6px}input,select,textarea{width:100%;background:var(--input);border:1px solid #34445e;color:var(--text);border-radius:9px;padding:12px;font:inherit}textarea{min-height:90px;resize:vertical}.full{width:100%;margin-top:14px}.result{background:var(--input);border:1px solid #283951;border-radius:10px;padding:12px;margin-top:9px;overflow-wrap:anywhere}.tag{display:inline-block;background:#222447;color:#d8d5ff;border-radius:7px;padding:5px 8px;margin:4px 4px 0 0;font-size:12px}.row{display:flex;align-items:center;justify-content:space-between;gap:8px}.small{padding:7px 9px;font-size:13px}.hide{display:none!important}footer{padding:10px 16px 28px;max-width:800px;margin:auto}.install{background:#143c48;border-color:#1d6875}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #a5b4fc;outline-offset:2px}@media(max-width:440px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.stat{padding:10px}.stat strong{font-size:14px}.grid{grid-template-columns:1fr}main{padding:12px}}
+</style>
+</head>
+<body>
+<header><div class="row"><div><h1>🚀 SpaceSEO Studio</h1><div class="muted">Your personal space Shorts toolkit</div></div><button id="install" class="install hide">Install app</button></div>
+<div class="stats"><div class="stat"><span class="muted">Your view range</span><strong>500–5K</strong></div><div class="stat"><span class="muted">Video format</span><strong>9:16 Shorts</strong></div><div class="stat"><span class="muted">Setup</span><strong>Personal</strong></div></div></header>
+<main>
+<div class="tabs"><button class="tab active" data-tab="generator">✦ SEO Generator</button><button class="tab" data-tab="ideas">◎ Topic Lab</button><button class="tab" data-tab="tracker">▤ View Tracker</button><button class="tab" data-tab="saved">♡ Saved</button></div>
+<section id="generator">
+<div class="panel"><h2>Generate video package</h2><div class="muted">Creates draft ideas on this device. No live search-volume or trend feed is connected.</div>
+<label for="topic">Video topic</label><input id="topic" value="Journey to Jupiter" placeholder="e.g. The Secret Beneath Europa">
+<div class="grid"><div><label for="style">Video style</label><select id="style"><option>AI cinematic space story</option><option>Real space facts</option><option>Science fiction mystery</option><option>Future space mission</option></select></div><div><label for="duration">Video length</label><select id="duration"><option>20 seconds</option><option>15 seconds</option><option>30 seconds</option></select></div></div>
+<label for="audience">Audience</label><select id="audience"><option>USA + worldwide · American English</option><option>Worldwide · Simple English</option></select>
+<button id="generate" class="primary full">✦ Generate SEO package</button></div><div id="output" class="panel"><h2>Your results appear here</h2><p class="muted">Enter a topic and tap Generate. Save useful results to revisit them later.</p></div>
+</section>
+<section id="ideas" class="hide"><div class="panel"><h2>Space Topic Lab</h2><p class="muted">Choose an idea to load it into the generator.</p><div class="grid">
+<button class="idea" data-topic="What If Humans Tried to Land on Jupiter?">🪐 Jupiter missions</button><button class="idea" data-topic="The Secret Beneath Europa's Ice">🌊 Europa mysteries</button><button class="idea" data-topic="The First Human on Mars">🔴 Mars stories</button><button class="idea" data-topic="A Signal From a Distant Galaxy">📡 Cosmic mysteries</button><button class="idea" data-topic="What Happens Inside a Black Hole?">🕳️ Black holes</button><button class="idea" data-topic="The Future of Human Space Travel">🚀 Future missions</button></div></div><div class="panel"><h2>20-second story formula</h2><p class="muted">0–2s: visual hook<br>2–7s: mission setup<br>7–14s: obstacle or discovery<br>14–18s: payoff<br>18–20s: satisfying loop or question</p></div></section>
+<section id="tracker" class="hide"><div class="panel"><h2>Shorts View Tracker</h2><p class="muted">Your entries are saved in this browser on this device.</p><label for="tracktitle">Video title</label><input id="tracktitle" placeholder="Your video title"><div class="grid"><div><label for="trackviews">Views</label><input id="trackviews" type="number" min="0" placeholder="2500"></div><div><label for="trackret">Average viewed % (optional)</label><input id="trackret" type="number" min="0" max="100" placeholder="85"></div></div><button id="addentry" class="primary full">+ Add video result</button><div id="tracklist"></div></div></section>
+<section id="saved" class="hide"><div class="panel"><h2>Saved packages</h2><p class="muted">Saved drafts stay in this browser on this device. Use Export backup to keep a copy.</p><div id="savedlist"></div><button id="export" class="full">Export backup JSON</button><label for="importfile">Restore a backup</label><input type="file" id="importfile" accept=".json,application/json"><button id="clear" class="full">Clear all local data</button></div></section>
+</main>
+<footer class="muted">Personal prototype, not affiliated with YouSEO or YouTube. Draft suggestions are locally generated templates, not verified trends, search volumes or guaranteed rankings. Fictional scenes should be labelled accurately; verify scientific claims.</footer>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const STORAGE='spaceseo-personal-v1';
+let db={saved:[],entries:[]};
+try{db=Object.assign(db,JSON.parse(localStorage.getItem(STORAGE)||'{}'))}catch(e){}
+function persist(){try{localStorage.setItem(STORAGE,JSON.stringify(db))}catch(e){alert('Storage is full. Export your backup and remove old entries.')}}
+function copyButton(value){return `<button class="small copy" data-copy="${esc(value)}">Copy</button>`}
+function makePackage(topic){
+ const t=topic.trim().replace(/\s+/g,' ')||'Space Exploration',style=$('style').value;
+ const fictional=style==='AI cinematic space story'||style==='Science fiction mystery';
+ const titles=[`What If ${t.replace(/[?.!]+$/,'')}?`,`The Mystery of ${t.replace(/[?.!]+$/,'')}`,`${t.replace(/[?.!]+$/,'')}: What Happens Next?`];
+ const hooks=[`“What if everything you knew about ${t} changed?”`,`“This mission was about to reveal something extraordinary.”`,`“The final discovery changed the entire journey.”`];
+ const words=t.toLowerCase().replace(/[^a-z0-9\s'-]/g,' ').split(/\s+/).filter(w=>w.length>2);
+ const keywords=[...new Set([...words,'space','space exploration','space facts','astronaut','universe','space shorts','cinematic space'])].slice(0,9);
+ const description=`Explore ${t} in a cinematic space ${fictional?'story':'video'}. Discover the mission, the mystery and the science behind this journey through the universe. ${fictional?'Fictional scenes are dramatized and do not depict an actual mission.':'Verify scientific claims with reliable sources.'}`;
+ return {topic:t,style,duration:$('duration').value,titles,hooks,keywords,description,hashtags:['#Space','#SpaceExploration','#Shorts'],created:new Date().toISOString()};
+}
+function renderPackage(p){
+ $('output').innerHTML=`<h2>✦ SEO package</h2><div class="muted">${esc(p.topic)} · ${esc(p.duration)}</div><h3>Title ideas</h3>${p.titles.map((t,i)=>`<div class="result"><div class="muted">OPTION ${i+1}</div><div style="margin:6px 0 10px;font-weight:650">${esc(t)}</div>${copyButton(t)}</div>`).join('')}<h3>Opening hooks</h3>${p.hooks.map(h=>`<div class="result">${esc(h)}<div style="margin-top:8px">${copyButton(h)}</div></div>`).join('')}<h3>Keyword ideas</h3><div>${p.keywords.map(k=>`<span class="tag">${esc(k)}</span>`).join('')}</div><div style="margin-top:8px">${copyButton(p.keywords.join(', '))}</div><h3>Description + hashtags</h3><div class="result">${esc(p.description)}<p>${p.hashtags.map(x=>`<span class="tag">${x}</span>`).join('')}</p>${copyButton(p.description+'\\n\\n'+p.hashtags.join(' '))}</div><button class="primary full" id="savepackage">♡ Save this package</button>`;
+ $('savepackage').onclick=()=>{db.saved.unshift(p);persist();renderSaved();$('savepackage').textContent='✓ Saved on this device'};
+}
+$('generate').onclick=()=>renderPackage(makePackage($('topic').value));
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));['generator','ideas','tracker','saved'].forEach(t=>$(t).classList.toggle('hide',t!==b.dataset.tab));if(b.dataset.tab==='tracker')renderEntries();if(b.dataset.tab==='saved')renderSaved()});
+document.querySelectorAll('.idea').forEach(b=>b.onclick=()=>{$('topic').value=b.dataset.topic;document.querySelector('[data-tab="generator"]').click();renderPackage(makePackage(b.dataset.topic))});
+document.addEventListener('click',async e=>{let b=e.target.closest('.copy');if(!b)return;try{await navigator.clipboard.writeText(b.dataset.copy);b.textContent='Copied!'}catch(err){prompt('Copy this text:',b.dataset.copy)}});
+$('addentry').onclick=()=>{let title=$('tracktitle').value.trim(),raw=$('trackviews').value,views=Number(raw),ret=$('trackret').value;if(!title||raw===''||views<0||(ret!==''&&(Number(ret)<0||Number(ret)>100))){alert('Enter a title and valid view count.');return}db.entries.unshift({title,views,ret:ret===''?'—':ret+'%',date:new Date().toLocaleDateString()});persist();$('tracktitle').value='';$('trackviews').value='';$('trackret').value='';renderEntries()};
+function renderEntries(){$('tracklist').innerHTML=db.entries.length?db.entries.map((v,i)=>`<div class="result"><div class="row"><strong>${esc(v.title)}</strong><button class="small delentry" data-i="${i}">Delete</button></div><div class="muted">${Number(v.views).toLocaleString()} views · Average viewed ${esc(v.ret)} · ${esc(v.date||'')}</div></div>`).join(''):'<p class="muted">No results added yet.</p>'}
+$('tracklist').onclick=e=>{let b=e.target.closest('.delentry');if(b){db.entries.splice(Number(b.dataset.i),1);persist();renderEntries()}};
+function renderSaved(){$('savedlist').innerHTML=db.saved.length?db.saved.map((p,i)=>`<div class="result"><strong>${esc(p.topic)}</strong><div class="muted">${esc(p.created||'')}</div><div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:8px"><button class="small open-saved" data-i="${i}">Open</button><button class="small delete-saved" data-i="${i}">Delete</button></div></div>`).join(''):'<p class="muted">No saved packages yet.</p>'}
+$('savedlist').onclick=e=>{let o=e.target.closest('.open-saved'),d=e.target.closest('.delete-saved');if(o){let p=db.saved[Number(o.dataset.i)];document.querySelector('[data-tab="generator"]').click();renderPackage(p)}if(d){db.saved.splice(Number(d.dataset.i),1);persist();renderSaved()}};
+$('export').onclick=()=>{let blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='SpaceSEO-personal-backup.json';a.click();URL.revokeObjectURL(url)};
+$('importfile').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let x=JSON.parse(await f.text());if(!Array.isArray(x.saved)||!Array.isArray(x.entries))throw Error();db=x;persist();renderSaved();renderEntries();alert('Backup restored.')}catch(err){alert('This backup file is not valid.')}};
+$('clear').onclick=()=>{if(confirm('Delete all saved packages and tracker entries from this browser? Export a backup first if needed.')){db={saved:[],entries:[]};persist();renderSaved();renderEntries()}};
+let installPrompt;$('install').classList.add('hide');window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;$('install').classList.remove('hide')});$('install').onclick=async()=>{if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;$('install').classList.add('hide')}else alert('Open the hosted app in Chrome and choose Add to Home screen.');};
+renderEntries();renderSaved();
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script>
+</body></html>
